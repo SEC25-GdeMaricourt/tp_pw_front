@@ -2,14 +2,11 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-<<<<<<< HEAD
   "schematics": {
     "@schematics/angular:component": {
       "style": "scss"
     }
   },
-=======
->>>>>>> 4b07abd (initial commit)
   "projects": {
     "amo_guigui_tpnote_front": {
       "projectType": "application",
@@ -32,14 +29,15 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [
-<<<<<<< HEAD
               "src/styles.scss"
-=======
-              "src/styles.css"
->>>>>>> 4b07abd (initial commit)
             ],
             "scripts": []
           },
@@ -97,11 +95,7 @@
               }
             ],
             "styles": [
-<<<<<<< HEAD
               "src/styles.scss"
-=======
-              "src/styles.css"
->>>>>>> 4b07abd (initial commit)
             ],
             "scripts": []
           }
@@ -109,8 +103,4 @@
       }
     }
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 4b07abd (initial commit)

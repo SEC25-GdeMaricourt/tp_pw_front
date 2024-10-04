@@ -1,0 +1,18 @@
+<div class="header">
+    <div class="top-row">
+        <img src="assets/marianne.png" class="im-marianne" />
+        <img src="assets/logo_meteo_france.png" class="im-meteo-fr" />
+        <div class="container">
+            <input type="text" placeholder="Rechercher une ville, un pays..." formControlName="searchValue"
+                class="searchBarInput" />
+            <button class="search-icon" mat-fab extended enabled>
+                <mat-icon>travel_explore</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="bottom-row">
+        @for (item of iconButtons; track $index) {
+        <app-icon-button [icon]="item.icon" [nom]="item.nom"> </app-icon-button>
+        }
+    </div>
+</div>
