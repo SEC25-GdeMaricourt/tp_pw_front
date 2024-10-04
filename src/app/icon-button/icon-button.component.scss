@@ -1,0 +1,22 @@
+.icon-button {
+    width: 200px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(173, 177, 230);
+    background-color: transparent;
+    border-color: transparent;
+    gap: 1rem;
+
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+        color: rgb(176, 39, 39);
+        gap: 2rem;
+        width: 200px;
+    }
+
+
+}
