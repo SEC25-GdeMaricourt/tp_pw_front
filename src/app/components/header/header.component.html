@@ -1,0 +1,76 @@
+<header>
+  <nav>
+    <div class="navbar">
+      <div class="innerblock" id="topheader">
+        <div class="container_logo" (click)="home()">
+          <img class="logo" src="img/marianne.svg" />
+          <img class="logo" src="img/image.png" />
+        </div>
+        <form class="block_search_form" [formGroup]="searchForm">
+          <input type="text" id="search_form_input" formControlName="search" placeholder="Rechercher une région ..." autocomplete="off">
+          <button type="submit" title="Lancer la recherche" aria-label="Lancer la recherche"></button>
+          <div class="dropdown" *ngIf="searchForm.get('search')?.value.length > 0">
+            <div class="dropdown-content">
+              <div *ngFor="let region of filteredRegions" class="dropdown-item" (click)="openFavDialog(region.id)">
+                <span>{{ region.name }}</span>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="container_rs">
+          <a href="https://www.facebook.com/MeteoFrance/" target="_blank" class="rs_link">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com/meteofrance" class="fa fa-twitter" target="_blank" class="rs_link">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://fr.linkedin.com/company/meteo-france" class="fa fa-linkedin" target="_blank" class="rs_link">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+        <div>
+          <div *ngIf="user; then thenBlock else elseBlock"></div>
+          <ng-template #thenBlock>
+            <div>
+              <div class="containerusername">
+                <span class="titleusername">Bonjour {{ username }},</span>
+              </div>
+              <div>
+                <button class="btn" mat-flat-button (click)="userSettings()">
+                  Paramètres utilisateur
+                </button>
+                <button class="btn" mat-flat-button (click)="logout()">
+                  Déconnexion
+                </button>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template #elseBlock>
+            <button class="btn" mat-flat-button (click)="signup()">
+              S'inscrire
+            </button>
+            <button class="btn" mat-flat-button (click)="signin()">
+              Se connecter
+            </button>
+          </ng-template>
+        </div>
+      </div>
+      <div class="innerblock" id="bottomheader">
+        <div class="containerbottom">
+          <span class="favtitle">Favoris :</span>
+          <div id="favlist">
+            <div *ngIf="favoris.length > 0; then thenFav else elseFav"></div>
+            <ng-template #thenFav>
+              <div class="favitem" *ngFor="let fav of favoris">
+                <span>{{ getRegionNameById(fav.id_region) }}</span>
+              </div>
+            </ng-template>
+            <ng-template #elseFav>
+              Pas encore de favoris
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

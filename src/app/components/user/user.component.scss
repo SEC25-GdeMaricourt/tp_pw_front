@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 20px;
+  color: #145e9a;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+}
+
+.both-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.f-container{
+  width: 45%;
+}
+
+.p-container{
+  width: 45%;
+}
+
+.fav-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.fav-delete-button {
+  width: 40px;
+  height: 40px;
+  background-color: #ff0000; 
+  color: #ffffff; 
+}
+
+.fav-delete-button:hover {
+  background-color: #cc0000; 
+}

@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>Paramètre utilisateur</h1>
+  <div class="both-container">
+    <div class="f-container">
+      <h4 style="text-decoration: underline;">Supprimer vos favoris : </h4>
+      <div *ngIf="favoris.length > 0">
+        <div *ngFor="let favori of favoris">
+          <div class="fav-container">
+            <span class="fav-title">{{ getRegionNameById(favori.id_region) }}</span>
+            <button class="fav-delete-button" mat-fab (click)="deleteFavorite(favori.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div class="p-container">
+      <h4 style="text-decoration: underline;">Changer votre mot de passe : </h4>
+      <form style="display: flex; flex-direction: column;" (ngSubmit)="changePassword()">
+        <mat-form-field appearance="fill">
+          <mat-label>Ancien mot de passe</mat-label>
+          <input matInput type="password" [(ngModel)]="oldPassword" name="oldPassword" required autocomplete="off">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Nouveau mot de passe</mat-label>
+          <input matInput type="password" [(ngModel)]="newPassword" name="newPassword" required autocomplete="off">
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Changer le mot de passe</button>
+      </form>
+    </div>
+  </div>
+</div>

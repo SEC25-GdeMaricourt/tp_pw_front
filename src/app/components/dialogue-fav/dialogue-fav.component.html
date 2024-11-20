@@ -1,0 +1,20 @@
+<div>
+  <div *ngIf="isConnected; then thenBlock else elseBlock"></div>
+  <ng-template #thenBlock>
+    <h2 mat-dialog-title>Ajout de favori</h2>
+    <mat-dialog-content>
+      Ajouter cette région à vos favoris :
+      <h3>{{ data.event.region }}</h3>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button mat-button (click)="onConfirm()" cdkFocusInitial>Oui</button>
+      <button mat-button mat-dialog-close>Non</button>
+    </mat-dialog-actions>
+  </ng-template>
+  <ng-template #elseBlock>
+    <h2 mat-dialog-title>Veuillez vous connecter pour ajouter un favori</h2>
+    <mat-dialog-actions>
+      <button mat-button mat-dialog-close>Fermer</button>
+    </mat-dialog-actions>
+  </ng-template>
+</div>

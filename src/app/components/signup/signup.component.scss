@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 20px;
+  color: #145e9a;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  
+}
