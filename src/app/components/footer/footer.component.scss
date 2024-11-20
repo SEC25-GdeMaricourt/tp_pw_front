@@ -1,0 +1,117 @@
+.footer_container {
+    width: 100%;
+    position: relative;
+    /* Positionner le conteneur */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* Alignement en bas pour le contenu */
+}
+
+.content_info {
+    width: 100%;
+    background-color: #0076c9;
+    padding-bottom: 1rem;
+
+    h2 {
+        color: white;
+        /* Couleur du texte */
+        //font-style: bold; /* Texte en gras */
+        font-size: 1.5rem;
+        /* Augmenter la taille de la police */
+        text-align: center;
+        /* Centrer le texte */
+        margin: 40px 0 0 0;
+        /* Ajouter une marge au-dessus (20px) et enlever les autres marges */
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+
+        hr {
+            border-top: 3px solid white; /* Crée une ligne blanche */
+            margin: 15px auto; /* Ajoute de l'espace au-dessus et en dessous de la ligne, et centre la ligne */
+            width: 10%; /* Largeur de la ligne à 50% de l'élément parent */
+        }
+    }
+
+    h3 {
+        color: white; /* Couleur du texte */
+        //font-style: bold; /* Texte en gras */
+        font-size: 1.5rem; /* Augmenter la taille de la police */
+        text-align: center; /* Centrer le texte */
+        margin: 250px 0 0 0; /* Ajouter une marge au-dessus (20px) et enlever les autres marges */
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+
+        hr {
+            border-top: 3px solid white; /* Crée une ligne blanche */
+            margin: 15px auto; /* Ajoute de l'espace au-dessus et en dessous de la ligne, et centre la ligne */
+            width: 10%; /* Largeur de la ligne à 50% de l'élément parent */
+        }
+    }
+
+    .icones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin: 5vh;
+    }
+
+    .footer_links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Permet de bien ordonner les éléments quand l'écran est réduit */
+        gap: 0.5rem;
+
+        /* Ajoute une marge en haut */
+        a {
+            text-decoration: none; /* Enlève le soulignement */
+            color: rgb(255, 255, 255); /* Couleur des liens */
+            transition: color 0.3s; /* Ajoute une transition pour le changement de couleur */
+
+            &:hover {
+                color: #db0084;
+                /* Couleur au survol */
+            }
+        }
+        .txt {
+            display: flex;
+            gap: 0.3rem;
+        }
+        .separator {
+            color: #db0084; /* Assigne une couleur rouge permanente aux séparateurs */
+        }
+    }
+}
+
+.marianne-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+
+
+    .image_marianne {
+        width: 88px;
+        height: auto;
+    }
+
+    .image_logofondbleu {
+        width: 80px;
+        height: auto;
+    }
+}
+
+
+.content_end {
+    width: 100%;
+    height: 10vh;
+    background-color: #145e9a;
+    display: flex;
+    /* Utiliser flexbox pour centrer le texte */
+    justify-content: center;
+    /* Centrer horizontalement */
+    align-items: center;
+    /* Centrer verticalement */
+    color: white;
+    /* Changer la couleur du texte si nécessaire */
+}

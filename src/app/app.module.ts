@@ -10,6 +10,8 @@ import { DialogueFavComponent } from './components/dialogue-fav/dialogue-fav.com
 import { SignupComponent } from './components/signup/signup.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { UserComponent } from './components/user/user.component';
+import { ClickableIconComponent } from './components/clickable-icon/clickable-icon.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
@@ -37,6 +39,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     SignupComponent,
     SigninComponent,
     UserComponent,
+    ClickableIconComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'fr' },
