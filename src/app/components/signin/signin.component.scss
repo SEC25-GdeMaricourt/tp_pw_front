@@ -12,5 +12,5 @@
 .form-group{
   display: flex;
   flex-direction: column;
-  
+  flex-wrap: wrap; /* Permet de bien ordonner les éléments quand l'écran est réduit */
 }

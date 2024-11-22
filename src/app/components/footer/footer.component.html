@@ -1,58 +1,72 @@
 <!-- charge la police Roboto-->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<div class="footer_container">
 
-
-    <div class="content_info">
-        <h2>Top 20 des villes les plus consultées
-            <hr> <!-- Barre horizontale -->
-        </h2>
-        <h3>Votre météo en outre-mer
-            <hr> <!-- Barre horizontale -->
-        </h3>
-
-
-        <div class="icones">
-            @for (icon_name of svg_icons_names; track $index) {
-            <app-clickable-icon [svg_icon_name]="icon_name" [redirect_path]="'http://localhost:4200'"></app-clickable-icon>
-            }
-        </div> 
-
-
-        <div class="footer_links">
-            <div class="txt"><span class="separator">></span><a href="http://localhost:4200">Légende</a></div>
-            <div class="txt"><span class="separator">></span><a href="http://localhost:4200">Mentions Légales</a></div>
-            <div class="txt"><span class="separator">></span><a href="http://localhost:4200">Gestion des Cookies</a>
+<div *ngIf="displayF; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <div class="footer_container">
+        <div class="content_info">
+            <h2>Top 20 des villes les plus consultées
+                <hr> <!-- Barre hosrizontale -->
+            </h2>
+            <h3>Votre météo en outre-mer
+                <hr> <!-- Barre horizontale -->
+            </h3>
+            <div class="icones">
+                @for (icon_name of svg_icons_names; track $index) {
+                <app-clickable-icon [svg_icon_name]="icon_name"
+                    [redirect_path]="'http://localhost:4200'"></app-clickable-icon>
+                }
             </div>
-            <div class="txt"><span class="separator">></span><a href="http://localhost:4200">Politique de
-                    Confidentialité</a></div>
-            <div class="txt"><span class="separator">></span><a href="http://localhost:4200">Droits de Reproduction</a>
+            <div class="footer_links">
+                <div class="txt"><span class="separator">></span><a href="http://localhost:4200">Légende</a></div>
+                <div class="txt"><span class="separator">></span><a href="http://localhost:4200">Mentions Légales</a>
+                </div>
+                <div class="txt"><span class="separator">></span><a href="http://localhost:4200">Gestion des Cookies</a>
+                </div>
+                <div class="txt"><span class="separator">></span><a href="http://localhost:4200">Politique de
+                        Confidentialité</a></div>
+                <div class="txt"><span class="separator">></span><a href="http://localhost:4200">Droits de
+                        Reproduction</a>
+                </div>
+                <div class="txt"><span class="separator">></span><a href="http://localhost:4200">Consentement</a></div>
+                <div class="txt"><span class="separator">></span><a href="http://localhost:4200">Accessibilité :
+                        partiellement conforme</a></div>
+                <div class="txt"><span class="separator">></span><a href="http://localhost:4200">Contact</a></div>
             </div>
-            <div class="txt"><span class="separator">></span><a href="http://localhost:4200">Consentement</a></div>
-            <div class="txt"><span class="separator">></span><a href="http://localhost:4200">Accessibilité :
-                    partiellement conforme</a></div>
-            <div class="txt"><span class="separator">></span><a href="http://localhost:4200">Contact</a></div>
+        </div>
+        <div class="marianne-wrapper">
+            <img src="assets/images/marianne.png" alt="République française" title="République française"
+                class="image_marianne" />
+            <a href="http://localhost:4200" target="_blank">
+                <img src="assets/images/logo_meteo_france.png" alt="Logo fond bleu" title="Météo france"
+                    class="image_logofondbleu" />
+            </a>
+        </div>
+        <div class="content_end">
+            <p>
+                © 2024 Copyright -
+                <!-- <a href="https://meteofrance.com">Météo-France</a> -->
+                <a href="http://localhost:4200">Météo-France</a>
+            </p>
         </div>
     </div>
-
-
-    <div class="marianne-wrapper">
-        <img src="assets/images/marianne.png" alt="République française" title="République française"
-            class="image_marianne" />
-        <a href="http://localhost:4200" target="_blank">
-            <img src="assets/images/logo_meteo_france.png" alt="Logo fond bleu" title="Météo france"
-                class="image_logofondbleu" />
-        </a>
+</ng-template>
+<ng-template #elseBlock>
+    <div>
+        <div class="marianne-wrapper">
+            <img src="assets/images/marianne.png" alt="République française" title="République française"
+                class="image_marianne" />
+            <a href="http://localhost:4200" target="_blank">
+                <img src="assets/images/logo_meteo_france.png" alt="Logo fond bleu" title="Météo france"
+                    class="image_logofondbleu" />
+            </a>
+        </div>
+        <div class="content_end">
+            <p>
+                © 2024 Copyright -
+                <!-- <a href="https://meteofrance.com">Météo-France</a> -->
+                <a href="http://localhost:4200">Météo-France</a>
+            </p>
+        </div>
     </div>
-
-
-    <div class="content_end">
-        <p>
-            © 2024 Copyright -
-            <!-- <a href="https://meteofrance.com">Météo-France</a> -->
-            <a href="http://localhost:4200">Météo-France</a>
-        </p>
-    </div>
-
-
-</div>
+</ng-template>

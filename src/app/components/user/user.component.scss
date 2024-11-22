@@ -12,6 +12,7 @@
 .both-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /* Permet de bien ordonner les éléments quand l'écran est réduit */
 }
 
 .f-container{
