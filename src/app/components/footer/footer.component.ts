@@ -4,6 +4,7 @@ import { ClickableIconComponent } from "../clickable-icon/clickable-icon.compone
 import { OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { regions } from '../../data/regions';
 
 @Component({
   selector: 'app-footer',
@@ -12,6 +13,7 @@ import { filter } from 'rxjs/operators';
 })
 export class FooterComponent {
   displayF: Boolean = false;
+  regions = regions; // Ajout de la propriété regions
 
   constructor(private route: Router){
   }

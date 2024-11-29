@@ -5,9 +5,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <div class="footer_container">
         <div class="content_info">
-            <h2>Top 20 des villes les plus consultées
+            <h2>Ensembles des villes consultées
                 <hr> <!-- Barre hosrizontale -->
             </h2>
+            <div class="regions-container">
+                <div *ngFor="let region of regions">
+                    <p>{{ region.name }}</p>
+                </div>
+            </div>
             <h3>Retrouvez-votre météo sur les réseaux
                 <hr> <!-- Barre horizontale -->
             </h3>
