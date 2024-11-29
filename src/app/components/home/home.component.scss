@@ -1,10 +1,11 @@
 .container {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   background-color: white;
   border: 1px solid #e0e0e0;
   border-radius: 5px;
-  padding: 20px;
-  margin: 50px;
+  padding: 5%;
+  margin: 5%;
   color: #145e9a;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
@@ -13,14 +14,15 @@
 .container_home {
   display: flex;
   justify-content: space-between;
-  flex-wrap: nowrap; /* Permet de bien ordonner les éléments quand l'écran est réduit */
+  flex-wrap: nowrap;
+  /* Permet de bien ordonner les éléments quand l'écran est réduit */
 }
 
 .main {
   display: flex;
   flex-direction: column; // Organise les éléments enfants en colonne
   width: 70%;
-  order: 1; 
+  order: 1;
 }
 
 #chartdiv {
@@ -37,10 +39,11 @@
   order: 2;
 }
 
-ul,// Style pour les éléments de liste
+ul,
+// Style pour les éléments de liste
 li {
-  margin: 0;            // Supprime la marge extérieure
-  padding: 0;           // Supprime le rembourrage intérieur
+  margin: 0; // Supprime la marge extérieure
+  padding: 0; // Supprime le rembourrage intérieur
   list-style-type: none; // Enlève les puces ou numéros de liste
 }
 
@@ -51,26 +54,26 @@ li {
 
 // Style pour le contenu de la carte
 .card-content {
-  display: flex;        // Utilise un affichage flexible
-  align-items: center;  // Centre verticalement les éléments enfants
+  display: flex; // Utilise un affichage flexible
+  align-items: center; // Centre verticalement les éléments enfants
 }
 
 // Style pour l'image dans le contenu de la carte
 .card-content img {
-  margin-right: 18px;   // Ajoute une marge à droite de l'image
+  margin-right: 18px; // Ajoute une marge à droite de l'image
 }
 
 // Style pour le contenu textuel
 .text-content {
-  display: flex;         // Utilise un affichage flexible
+  display: flex; // Utilise un affichage flexible
   flex-direction: column; // Organise les éléments enfants en colonne
 }
 
 // Style pour le contenu éditorial
 .editorial-content {
-  max-width: 400px;      // Définit une largeur maximale
+  max-width: 400px; // Définit une largeur maximale
   min-width: 240px;
-  margin-bottom: 8px;    // Ajoute une marge en bas
+  margin-bottom: 8px; // Ajoute une marge en bas
 }
 
 // Style pour les liens dans le contenu éditorial
@@ -81,7 +84,7 @@ li {
 // Style pour les images dans le contenu éditorial
 .editorial-content img {
   transition: all 0.3s ease-in-out; // Ajoute une transition fluide pour tous les changements
-  border-radius: 5px;               // Arrondit les coins de l'image
+  border-radius: 5px; // Arrondit les coins de l'image
 }
 
 // Style pour l'effet de survol sur les images des liens
@@ -91,21 +94,21 @@ li {
 
 // Style pour le contenu de la carte Material dans le contenu éditorial
 .editorial-content mat-card-content {
-  padding: 5px;          // Ajoute un rembourrage intérieur
+  padding: 5px; // Ajoute un rembourrage intérieur
 }
 
 // Style pour le titre de la carte Material dans le contenu éditorial
 .editorial-content mat-card-title {
-  color: #003661;        // Définit la couleur du texte
-  font-size: 13px;       // Définit la taille de la police
-  font-weight: 500;      // Définit l'épaisseur de la police (semi-gras)
+  color: #003661; // Définit la couleur du texte
+  font-size: 13px; // Définit la taille de la police
+  font-weight: 500; // Définit l'épaisseur de la police (semi-gras)
 }
 
 // Style pour le sous-titre de la carte Material dans le contenu éditorial
 .editorial-content mat-card-subtitle {
-  color: #1c9bd4;        // Définit la couleur du texte
-  font-size: 13px;       // Définit la taille de la police
-  font-weight: 400;      // Définit l'épaisseur de la police (normal)
+  color: #1c9bd4; // Définit la couleur du texte
+  font-size: 13px; // Définit la taille de la police
+  font-weight: 400; // Définit l'épaisseur de la police (normal)
 }
 
 // Media query pour les écrans de taille moyenne
@@ -114,7 +117,8 @@ li {
     flex-direction: column;
   }
 
-  .main, #sidebar {
+  .main,
+  #sidebar {
     width: 100%;
     order: 0;
     margin-left: 0;
